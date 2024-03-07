@@ -1,5 +1,5 @@
 import React from "react";
-import {FcLike} from "react-icons/fc";
+import {FcLike,FcLikePlaceholder} from "react-icons/fc";
 import { toast } from "react-toastify";
 
 const Card = (props) =>{
@@ -35,7 +35,7 @@ const Card = (props) =>{
               {likedCourses.includes(course.id) ? (
                 <FcLike fontSize="1.75rem" />
               ) : (
-                <FcLike fontSize="1.75rem" />
+                <FcLikePlaceholder fontSize="1.75rem" />
               )}
             </button>
           </div>

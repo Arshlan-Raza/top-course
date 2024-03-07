@@ -4,9 +4,11 @@ import Card from "./Card";
 const Cards = (props) =>{
     let courses = props.courses;
     const [likedCourses , setLikedCourses] = useState([]);
-    
+    let category = props.category; 
+
     function getCourses ()  {
-        let allCourses = [];
+        if(category == "All"){
+            let allCourses = [];
 
         Object.values(courses).forEach(array => {
             array.forEach(courseData =>{
@@ -14,6 +16,12 @@ const Cards = (props) =>{
             })
         })
         return allCourses;
+        }
+        else{
+            // sirf catergory wala
+            return courses[category];
+        }
+        
     }
 
     return (
